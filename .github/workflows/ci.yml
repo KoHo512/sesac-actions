@@ -3,12 +3,12 @@ name: Test Workflow
 on:
   push:
     branches:
-      - features
+      - deploy/*
 
 jobs:
-  hello-test:
+  test:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Print Test
+      - name: test
         run: echo "test"
