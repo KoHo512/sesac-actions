@@ -5,10 +5,10 @@ on:
     branches:
       - features
 
-  jobs:
-    hello-test:
-      runs-on: ubuntu-24.04
+jobs:
+  hello-test:
+    runs-on: ubuntu-24.04
 
-      steps:
-        - name: Print Test
-          run: echo "test"
+    steps:
+      - name: Print Test
+        run: echo "test"
