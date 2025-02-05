@@ -19,7 +19,7 @@ services:
     container_name: backend-container
     build:
       context: ./backend
-    image: nodecrewbeemo/backend:latest
+    image: koho011/backend:latest
     env_file:
       - .env
     environment:
@@ -37,7 +37,7 @@ services:
       context: ./frontend
       args:
         VITE_API_URL: ${VITE_API_URL}
-    image: nodecrewbeemo/frontend:latest
+    image: koho011/frontend:latest
     ports:
       - "80:80"
     networks:
