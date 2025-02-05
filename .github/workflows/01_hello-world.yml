@@ -1,22 +1,22 @@
-name: Hello World
+# name: Hello World
 
-on:
-  push:
-    branches:
-      - main
-      - develop
+# on:
+#   push:
+#     branches:
+#       - main
+#       - develop
     
-jobs:
-  hello-world:
-    runs-on: ubuntu-24.04
+# jobs:
+#   hello-world:
+#     runs-on: ubuntu-24.04
 
-    steps:
-      - name: Print Hello World
-        run: echo "Hello, World!"
+#     steps:
+#       - name: Print Hello World
+#         run: echo "Hello, World!"
 
-  hello-secret:
-    runs-on: ubuntu-24.04
+#   hello-secret:
+#     runs-on: ubuntu-24.04
 
-    steps:
-      - name: Print Secret
-        run: echo "${{ secrets.MY_SECRET }}"
+#     steps:
+#       - name: Print Secret
+#         run: echo "${{ secrets.MY_SECRET }}"
