@@ -64,8 +64,12 @@ services:
     image: koho011/frontend:latest
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - backend-connect
+    volumes:
+      - /etc/letsencrypt/live/3.38.115.140.sslip.io/fullchain.pem:/etc/letsencrypt/live/3.38.115.140.sslip.io/fullchain.pem:ro
+      - /etc/letsencrypt/live/3.38.115.140.sslip.io/privkey.pem:/etc/letsencrypt/live/3.38.115.140.sslip.io/privkey.pem:ro
     depends_on:
       - backend
       - db
