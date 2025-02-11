@@ -13,6 +13,6 @@ FROM nginx:mainline-alpine-slim
 COPY --from=build /app/dist /usr/share/nginx/html
 # 모듈화된 서버 설정 파일들을 컨테이너로 복사
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY ./conf.d /etc/nginx/nginx.conf
+COPY ./conf.d /etc/nginx/conf.d
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
