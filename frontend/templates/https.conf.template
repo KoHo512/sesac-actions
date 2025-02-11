@@ -2,13 +2,13 @@
 server {
     listen 443 ssl;
     http2 on;
-    server_name 3.38.115.140.sslip.io;
+    server_name ${DOMAIN};
 
     # SSL 인증서 설정
     # 인증서와 공개 키 파일
-    ssl_certificate /etc/letsencrypt/live/3.38.115.140.sslip.io/fullchain.pem;
+    ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
     # 개인 키 파일
-    ssl_certificate_key /etc/letsencrypt/live/3.38.115.140.sslip.io/privkey.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
 
     # SSL 설정
     ssl_protocols TLSv1.2 TLSv1.3;
@@ -23,7 +23,7 @@ server {
     }
 
     location /api/ {
-        proxy_pass http://backend-container:8080;
+        proxy_pass ${API_URL};
         proxy_set_header Host $host;
     }
 }
