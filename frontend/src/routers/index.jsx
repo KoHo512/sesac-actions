@@ -4,7 +4,7 @@ import ArticlePage from "../pages/ArticlePage";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <HomePage />,
   },
   {
